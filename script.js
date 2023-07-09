@@ -12,7 +12,7 @@ var updateTime = () => {
     var seconds = curTime.getSeconds();
 
     if (hours < 10) {
-        minutes = "0" + minutes;
+        hours = "0" + hours;
     }
 
     if (minutes < 10) {
