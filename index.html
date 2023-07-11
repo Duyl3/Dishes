@@ -4,17 +4,26 @@
 <head>
     <meta charset="utf-8">
     <title>Подобрать блюдо</title>
-    <link rel="stylesheet" href="styledef.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Создаётся модальное окно -->
+    <div class="modal-container">
+        <div class="modal-content" value="0">
+            <button class="close">X</button>
+            <p id="recipe"></p>
+        </div>
+
+    </div>
+    <!-- Основная страница -->
     <div class="container">
         <h1>Время покушать!
             <br>
             <span id="timer"></span>
         </h1>
         <img id="images"
-            src="https://img.freepik.com/premium-photo/food-on-the-table-autumn-food-assortment-top-view-free-space-for-your-text_187166-5580.jpg"
+            src="https://zira.uz/wp-content/uploads/2019/02/brusketta2-e1549960469202.jpg"
             alt="foody">
         <p id="timeSel">Выбрать время</p>
         <select id="time">
@@ -30,7 +39,7 @@
             <option value="1">Сладкое</option>
 
         </select>
-        <button onclick="Press()" id="clickMe">Нажми на меня</button>
+        <button class="Click" data-trigger>Нажми на меня</button>
 
     </div>
     <script type="text/javascript" src="script.js"></script>

@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque;
+  text-align: center;
+  background-image: url("https://kartinkin.net/uploads/posts/2021-07/1626262468_14-kartinkin-com-p-temnii-fon-dlya-menyu-krasivo-15.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.modal-container {
+  pointer-events: none;
+  opacity: 0;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: opacity .3s, background-color .5s;
+}
+
+.is-open {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  overflow: auto;
+  width: 70%;
+  height: 50%;
+  max-width: 400px;
+  max-height: 300px;
+  padding: 20px;
+  background-color: #e9e5c2;
+  border-radius: 30px;
+}
+
+.close {
+  position: absolute;
+  top: 400px;
+  right: 1000px;
+  width: 20px;
+  height: 20px;
+  background-color: #e9e5c2;
+  border: solid 1px #222;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Bungee Shade', cursive;
+  color: rgb(198, 204, 198);
+}
+
+#recipe {
+  margin-top: 25%;
+}
+
+#timer {
+  font: "Arial";
+  color: rgb(210, 231, 210);
+  font-style: inherit;
+}
+
+#images {
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 3px groove;
+  border-radius: 5px;
+  border-color: rgb(148, 145, 143);
+}
+
+#timeSel,
+#foodSel {
+  font-family: 'Bungee Shade', cursive;
+  color: rgb(198, 204, 198);
+  margin-top: 45px;
+}
+
+#time {
+  border: 1px solid;
+  border-color: black;
+  background-color: #d8b37c;
+  max-width: 20%;
+  height: 40px;
+}
+
+#foodType {
+  border: 1px solid;
+  border-color: black;
+  background-color: #d8b37c;
+  max-width: 20%;
+  width: 120px;
+  height: 40px;
+
+}
+
+button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 40px #d8b37c inset, 0 0 0 0 #d8b37c;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgb(8, 8, 8);
+  transition: .15s ease-in-out;
+  margin-top: 30px;
+}
+
+button:hover {
+  box-shadow: 0 0 10px 0 rgb(210, 231, 210) inset, 0 0 10px 4px rgb(210, 231, 210);
+  color: rgb(105, 161, 105);
+}
